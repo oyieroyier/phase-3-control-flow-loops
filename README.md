@@ -85,9 +85,7 @@ Each time Ruby runs the loop, it will assign a new value for the block parameter
 times):
 
 ```rb
-10.times do |i|
-  puts "i is: #{i}"
-end
+10.times { |i| puts "i is: #{i}" }
 # i is: 0
 # i is: 1
 # i is: 2
@@ -122,9 +120,7 @@ objects (as we'll see later), but one common use case for the `#each` method is
 to use it with a [Range][ruby range]:
 
 ```rb
-(1..20).each do |num|
-  puts num
-end
+(1..20).each { |num| puts num }
 ```
 
 This can be helpful for running a loop of a specified set of numbers, starting

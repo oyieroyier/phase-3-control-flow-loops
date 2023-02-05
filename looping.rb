@@ -21,25 +21,27 @@ def fizzbuzz_printer
   counter = 1
   until counter == 101
     if counter % 3 == 0 && counter % 5 == 0
-    puts "FizzBuzz"
-  elsif counter % 3 == 0
-    puts "Fizz"
-  elsif counter % 5 == 0
-    puts "Buzz"
-  else
-    puts counter
-  end
-  counter += 1
+      puts "FizzBuzz"
+    elsif counter % 3 == 0
+      puts "Fizz"
+    elsif counter % 5 == 0
+      puts "Buzz"
+    else
+      puts counter
+    end
+    counter += 1
   end
 end
 
 def reverse_string(str)
   # your code here
-  len = str.length
+  # len = str.length
   output = ""
 
-  output = str.split("")
-  p output.reverse.join("")
+  str.length.times do |i|
+    output += str[str.length - 1 - i]
+  end
+  output
 end
 
-reverse_string "String"
+puts reverse_string("String")

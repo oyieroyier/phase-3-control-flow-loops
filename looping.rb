@@ -45,3 +45,18 @@ def reverse_string(str)
 end
 
 puts reverse_string("String")
+
+=begin
+ An alternative implementation of the above method.
+
+def reverse_string(str)
+  string_split = str.split("")
+  reversed_array = []
+
+  str.length.times { reversed_array.push(string_split.pop) }
+    reversed_array.join
+end
+
+p reverse_string("String")
+
+=end
